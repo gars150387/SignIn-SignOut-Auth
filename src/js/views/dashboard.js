@@ -9,10 +9,10 @@ export const Dashboard = () => {
 		<>
 			<h1>LogedIn</h1>
 			<button
-			// onClick={() => {
-			// 	signOut();
-			// 	history.push("/");
-			>
+				onClick={() => {
+					signOut();
+					history.push("/");
+				}}>
 				LogOut
 			</button>
 		</>

@@ -12,7 +12,7 @@ export const Home = () => {
 	const onSignInClicked = async (email, password) => {
 		try {
 			await signIn(email, password);
-			// console.log("success");
+			console.log("success");
 			history.push("/dashboard");
 		} catch (e) {
 			alert(e.message);
@@ -55,7 +55,10 @@ export const Home = () => {
 							<button
 								type="submit"
 								className="btn btn-black"
-								onClick={() => onSignInClicked(email, password)}>
+								onClick={e => {
+									onSignInClicked(email, password);
+									e.preventDefault();
+								}}>
 								Login
 							</button>
 							<button type="submit" className="btn btn-secondary">
