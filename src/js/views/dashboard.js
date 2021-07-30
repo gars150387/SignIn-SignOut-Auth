@@ -8,11 +8,13 @@ export const Dashboard = () => {
 	return (
 		<>
 			<h1>LogedIn</h1>
-			<button onClick={()=> {
-				signOut();
-				history.push("/");
-				}}>LogOut</button>
-			
+			<button
+			// onClick={() => {
+			// 	signOut();
+			// 	history.push("/");
+			>
+				LogOut
+			</button>
 		</>
 	);
 };

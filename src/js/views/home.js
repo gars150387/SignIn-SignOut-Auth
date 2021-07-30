@@ -12,6 +12,7 @@ export const Home = () => {
 	const onSignInClicked = async (email, password) => {
 		try {
 			await signIn(email, password);
+			// console.log("success");
 			history.push("/dashboard");
 		} catch (e) {
 			alert(e.message);
